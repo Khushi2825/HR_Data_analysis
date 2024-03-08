@@ -62,6 +62,12 @@ ORDER BY COUNT(*) DESC
 
 --Question.3
 --What is the age distribution of employees in the company?
+SELECT
+min(age) AS youngest,
+max(age) AS oldest
+FROM hr
+WHERE age >=18 and termdate = '0000-00-00'
+
 SELECT COUNT(*),
 age
 FROM hr
